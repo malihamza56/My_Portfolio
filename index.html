@@ -50,31 +50,32 @@
         box-sizing: border-box;
       }
       /* ============ OVERFLOW / MOBILE SAFETY ============ */
-html, body{
-  max-width:100%;
-  overflow-x:hidden;
-}
+      html,
+      body {
+        max-width: 100%;
+        overflow-x: hidden;
+      }
 
-/* stop long unbroken text (emails, links) from forcing the page wider than the viewport */
-.ci-value,
-.ci-value a,
-.project-desc,
-.hero-sub,
-.about-card p,
-.github-desc,
-.footer-tag{
-  overflow-wrap:break-word;
-  word-break:break-word;
-}
+      /* stop long unbroken text (emails, links) from forcing the page wider than the viewport */
+      .ci-value,
+      .ci-value a,
+      .project-desc,
+      .hero-sub,
+      .about-card p,
+      .github-desc,
+      .footer-tag {
+        overflow-wrap: break-word;
+        word-break: break-word;
+      }
 
-/* let flex children shrink instead of forcing their container wider */
-.contact-info-card{
-  min-width:0;
-}
-.contact-info-card > div{
-  min-width:0;
-  flex:1 1 auto;
-}
+      /* let flex children shrink instead of forcing their container wider */
+      .contact-info-card {
+        min-width: 0;
+      }
+      .contact-info-card > div {
+        min-width: 0;
+        flex: 1 1 auto;
+      }
       html {
         scroll-behavior: smooth;
       }
@@ -913,22 +914,24 @@ html, body{
         text-overflow: ellipsis;
       }
       /* screenshot viewport */
-      .project-shot{
-  aspect-ratio:16/10;
-  position:relative;
-  overflow:hidden;
-  width:100%;
-}
-.project-card.featured .project-shot{ aspect-ratio:16/8; }
+      .project-shot {
+        aspect-ratio: 16/10;
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+      }
+      .project-card.featured .project-shot {
+        aspect-ratio: 16/8;
+      }
 
-.project-shot img{
-  width:100%;
-  height:100%;
-  max-width:100%;
-  object-fit:cover;
-  object-position:top center;
-  display:block;
-}
+      .project-shot img {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        object-fit: cover;
+        object-position: top center;
+        display: block;
+      }
       .project-card:hover .project-shot img {
         transform: scale(1.045);
       }
@@ -1387,117 +1390,270 @@ html, body{
         border: 1px solid var(--lime);
         box-shadow: 0 0 20px rgba(183, 255, 0, 0.4);
       }
-/* ============ RESPONSIVE ============ */
-@media (max-width: 1200px) {
-  .wrap { padding: 0 28px; }
-}
+      /* ============ RESPONSIVE ============ */
+      @media (max-width: 1200px) {
+        .wrap {
+          padding: 0 28px;
+        }
+      }
 
-@media (max-width: 1080px) {
-  .tech-groups { grid-template-columns: repeat(2, 1fr); }
-  .services-grid { grid-template-columns: repeat(2, 1fr); }
-  .social-grid { grid-template-columns: repeat(3, 1fr); }
-  .hero-stats { gap: 20px; }
-}
+      @media (max-width: 1080px) {
+        .tech-groups {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .services-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        .social-grid {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        .hero-stats {
+          gap: 20px;
+        }
+      }
 
-@media (max-width: 900px) {
-  .navbar { width: calc(100% - 24px); padding: 10px 12px 10px 18px; }
-  .nav-links { display: none; }
-  .nav-cta { display: none; }
-  .nav-toggle { display: block; }
+      @media (max-width: 900px) {
+        .navbar {
+          width: calc(100% - 24px);
+          padding: 10px 12px 10px 18px;
+        }
+        .nav-links {
+          display: none;
+        }
+        .nav-cta {
+          display: none;
+        }
+        .nav-toggle {
+          display: block;
+        }
 
-  .hero { padding: 130px 0 60px; }
-  .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-  .hero-visual { order: -1; height: 400px; margin-bottom: 10px; }
-  .hero-stats { grid-template-columns: repeat(2, 1fr); row-gap: 24px; margin-top: 44px; }
-  .hero-ctas { width: 100%; }
-  .hero-ctas .btn { flex: 1 1 auto; justify-content: center; }
+        .hero {
+          padding: 130px 0 60px;
+        }
+        .hero-grid {
+          grid-template-columns: 1fr;
+          gap: 40px;
+        }
+        .hero-visual {
+          order: -1;
+          height: 400px;
+          margin-bottom: 10px;
+        }
+        .hero-stats {
+          grid-template-columns: repeat(2, 1fr);
+          row-gap: 24px;
+          margin-top: 44px;
+        }
+        .hero-ctas {
+          width: 100%;
+        }
+        .hero-ctas .btn {
+          flex: 1 1 auto;
+          justify-content: center;
+        }
 
-  .about-grid { grid-template-columns: 1fr; gap: 36px; }
-  .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+        .about-grid {
+          grid-template-columns: 1fr;
+          gap: 36px;
+        }
+        .contact-grid {
+          grid-template-columns: 1fr;
+          gap: 32px;
+        }
 
-  .timeline { padding-left: 26px; }
+        .timeline {
+          padding-left: 26px;
+        }
 
-  .cursor-dot { display: none; }
-}
-.projects-grid{
-  min-width:0;
-}
-.project-card{
-  min-width:0;
-}
-.project-media,
-.project-shot{
-  min-width:0;
-}
+        .cursor-dot {
+          display: none;
+        }
+      }
+      .projects-grid {
+        min-width: 0;
+      }
+      .project-card {
+        min-width: 0;
+      }
+      .project-media,
+      .project-shot {
+        min-width: 0;
+      }
 
-@media (max-width: 768px) {
-  .section { padding: 100px 0; }
-  .section-head { margin-bottom: 44px; }
-  .tech-groups { grid-template-columns: repeat(2, 1fr); gap: 28px; }
-  .services-grid { grid-template-columns: 1fr 1fr; }
-  .github-card { padding: 32px; }
-}
+      @media (max-width: 768px) {
+        .section {
+          padding: 100px 0;
+        }
+        .section-head {
+          margin-bottom: 44px;
+        }
+        .tech-groups {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 28px;
+        }
+        .services-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+        .github-card {
+          padding: 32px;
+        }
+      }
 
-@media (max-width: 680px) {
-  .wrap { padding: 0 20px; }
-  .section { padding: 84px 0; }
+      @media (max-width: 680px) {
+        .wrap {
+          padding: 0 20px;
+        }
+        .section {
+          padding: 84px 0;
+        }
 
-  .stat-num { font-size: 24px; }
-  .stat-label { font-size: 11px; }
+        .stat-num {
+          font-size: 24px;
+        }
+        .stat-label {
+          font-size: 11px;
+        }
 
-  .tech-groups { grid-template-columns: 1fr 1fr; gap: 24px; }
-  .services-grid { grid-template-columns: 1fr; }
-  .service-card { padding: 26px; }
+        .tech-groups {
+          grid-template-columns: 1fr 1fr;
+          gap: 24px;
+        }
+        .services-grid {
+          grid-template-columns: 1fr;
+        }
+        .service-card {
+          padding: 26px;
+        }
 
-  .projects-grid { grid-template-columns: 1fr; gap: 18px; }
-  .project-card { grid-column: 1 / -1 !important; padding: 20px; }
+        .projects-grid {
+          grid-template-columns: 1fr;
+          gap: 18px;
+        }
+        .project-card {
+          grid-column: 1 / -1 !important;
+          padding: 20px;
+        }
 
-  .social-grid { grid-template-columns: repeat(2, 1fr); }
+        .social-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
 
-  .github-card { flex-direction: column; align-items: flex-start; gap: 20px; }
-  .github-link-btn { width: 100%; justify-content: center; }
+        .github-card {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 20px;
+        }
+        .github-link-btn {
+          width: 100%;
+          justify-content: center;
+        }
 
-  .contact-form { padding: 28px; }
-  .contact-info-card { padding: 18px 20px; }
+        .contact-form {
+          padding: 28px;
+        }
+        .contact-info-card {
+          padding: 18px 20px;
+        }
 
-  .float-chip { display: none; }
-  .portrait-frame { width: 260px; height: 330px; }
+        .float-chip {
+          display: none;
+        }
+        .portrait-frame {
+          width: 260px;
+          height: 330px;
+        }
 
-  .footer-top { flex-direction: column; gap: 24px; }
-  .footer-links { gap: 16px; }
-}
+        .footer-top {
+          flex-direction: column;
+          gap: 24px;
+        }
+        .footer-links {
+          gap: 16px;
+        }
+      }
 
-@media (max-width: 480px) {
-  .wrap { padding: 0 18px; }
-  .section { padding: 70px 0; }
+      @media (max-width: 480px) {
+        .wrap {
+          padding: 0 18px;
+        }
+        .section {
+          padding: 70px 0;
+        }
 
-  .eyebrow { font-size: 11px; }
-  .hero-sub { font-size: 15px; }
-  .hero-ctas { flex-direction: column; gap: 10px; }
-  .hero-stats { grid-template-columns: 1fr 1fr; gap: 18px 14px; }
+        .eyebrow {
+          font-size: 11px;
+        }
+        .hero-sub {
+          font-size: 15px;
+        }
+        .hero-ctas {
+          flex-direction: column;
+          gap: 10px;
+        }
+        .hero-stats {
+          grid-template-columns: 1fr 1fr;
+          gap: 18px 14px;
+        }
 
-  .about-card, .service-card, .tl-card, .contact-form { padding: 22px; }
-  .trait-list { grid-template-columns: 1fr; gap: 10px; }
+        .about-card,
+        .service-card,
+        .tl-card,
+        .contact-form {
+          padding: 22px;
+        }
+        .trait-list {
+          grid-template-columns: 1fr;
+          gap: 10px;
+        }
 
-  .tech-groups { grid-template-columns: 1fr; gap: 22px; }
-  .tech-chip { font-size: 12.5px; padding: 9px 12px; }
+        .tech-groups {
+          grid-template-columns: 1fr;
+          gap: 22px;
+        }
+        .tech-chip {
+          font-size: 12.5px;
+          padding: 9px 12px;
+        }
 
-  .social-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .social-card { padding: 22px 12px 18px; }
+        .social-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .social-card {
+          padding: 22px 12px 18px;
+        }
 
-  .philo-line { font-size: 22px; }
+        .philo-line {
+          font-size: 22px;
+        }
 
-  .portrait-frame { width: 220px; height: 280px; }
-  .navbar { border-radius: 24px; }
-  .nav-logo { font-size: 14px; }
-}
+        .portrait-frame {
+          width: 220px;
+          height: 280px;
+        }
+        .navbar {
+          border-radius: 24px;
+        }
+        .nav-logo {
+          font-size: 14px;
+        }
+      }
 
-@media (max-width: 380px) {
-  .hero-headline { font-size: 32px; }
-  .section-title { font-size: 26px; }
-  .btn { padding: 12px 20px; font-size: 13px; }
-  .social-grid { grid-template-columns: 1fr 1fr; }
-}
+      @media (max-width: 380px) {
+        .hero-headline {
+          font-size: 32px;
+        }
+        .section-title {
+          font-size: 26px;
+        }
+        .btn {
+          padding: 12px 20px;
+          font-size: 13px;
+        }
+        .social-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
     </style>
   </head>
   <body>
@@ -1643,8 +1799,12 @@ html, body{
             <div class="trait"><b>03 —</b> Consistent</div>
             <div class="trait"><b>04 —</b> Always Learning</div>
           </div>
-          <a href="assets/my_cv.pdf" class="btn btn-primary" id="resumeBtn"
-            download="Ali-Hamza-resume.pdf">Download Resume ↓</a
+          <a
+            href="assets/my_cv.pdf"
+            class="btn btn-primary"
+            id="resumeBtn"
+            download="Ali-Hamza-resume.pdf"
+            >Download Resume ↓</a
           >
         </div>
       </div>
@@ -1810,11 +1970,10 @@ html, body{
                 </div>
               </div>
               <div class="project-shot">
-                
-                  <img
-                    src="assets/bussiness_website.png"
-                    alt="CIVORA Engineering website homepage"/>
-              
+                <img
+                  src="assets/bussiness_website.png"
+                  alt="CIVORA Engineering website homepage"
+                />
               </div>
             </div>
             <div class="project-top">
@@ -1855,10 +2014,9 @@ html, body{
                 </div>
               </div>
               <div class="project-shot">
-                
-                  ><img
-                    src="assets/github_scraper.png"
-                    alt="Project screenshot"
+                ><img
+                  src="assets/github_scraper.png"
+                  alt="Project screenshot"
                 />
               </div>
             </div>
@@ -1897,10 +2055,9 @@ html, body{
                 </div>
               </div>
               <div class="project-shot">
-                
-                  ><img
-                    src="assets/birthday_website.png"
-                    alt="Birthday Website"
+                ><img
+                  src="assets/birthday_website.png"
+                  alt="Birthday Website"
                 /><
               </div>
             </div>
@@ -2175,6 +2332,28 @@ html, body{
                 <path d="m3 6 9 6.5L21 6" /></svg
             ></span>
             <span class="social-name">Email</span>
+            <span class="social-visit">Visit ↗</span>
+          </a>
+          <a
+            href="https://www.facebook.com/share/1HqZadVbxb/"
+            target="_blank"
+            rel="noopener"
+            class="glass glow-hover social-card reveal reveal-delay-2"
+          >
+            <span class="social-ic"
+              ><svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path
+                  d="M17 2h-2.5A4.5 4.5 0 0 0 10 6.5V9H7.5v4H10v9h4v-9h3l.5-4h-3.5V6.5a1 1 0 0 1 1-1H17z"
+                /></svg
+            ></span>
+            <span class="social-name">Facebook</span>
             <span class="social-visit">Visit ↗</span>
           </a>
         </div>
@@ -2502,9 +2681,6 @@ html, body{
           );
         });
       }
-
-      
-      
 
       // ---- Contact form (front-end only) ----
       document
