@@ -23,6 +23,16 @@
       href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="shortcut icon" href="/assets/my_pfp.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unlock&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Unlock&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Metal+Mania&family=Unlock&display=swap" rel="stylesheet">
     <style>
       /* ============ TOKENS ============ */
       :root {
@@ -37,8 +47,8 @@
         --text: #f5f7f2;
         --text2: #a7ada8;
         --muted: #68706b;
-        --font-display: "Space Grotesk", sans-serif;
-        --font-body: "Inter", sans-serif;
+        --font-display: metal Mania;
+        --font-body: "Dm Mono";
         --font-mono: "JetBrains Mono", monospace;
         --ease: cubic-bezier(0.16, 0.8, 0.24, 1);
         --maxw: 1240px;
@@ -281,7 +291,7 @@
         backdrop-filter: blur(20px);
         -webkit-backdrop-filter: blur(20px);
         border: 1px solid var(--border-glass);
-        border-radius: 100px;
+        border-radius: 10px;
       }
       .nav-logo {
         font-family: var(--font-display);
@@ -295,11 +305,11 @@
       .nav-links {
         display: flex;
         align-items: center;
-        gap: 6px;
+        gap: 25px;
       }
       .nav-links a {
-        font-size: 13px;
-        font-weight: 500;
+        font-size: 14px;
+        font-weight: 600;
         color: var(--text2);
         padding: 8px 14px;
         border-radius: 100px;
@@ -308,34 +318,64 @@
           background 0.25s;
         position: relative;
       }
-      .nav-links a:hover {
+      .nav-links a::after{
+        content: "";
+        height: 2px;
+        position: absolute;
+        left: 50%;
+        bottom: -5px;
+        transform: translateX(-50%);
+        width: 0px;
+        background-color: var(--lime);
+        transition: width 0.3s ease;
+
+      }
+      .nav-links :hover{
+        color: var(--lime);
+      }
+
+      .nav-links a:hover::after{
+        width: 70%;
+      }
+      .nav-links a.active::after{
+       
+        width: 70%;
+      }
+      .nav-links a.active{
+         color: var(--lime);
+      }
+
+      
+      /* .nav-links a:hover {
         color: var(--text);
         background: rgba(255, 255, 255, 0.05);
-      }
-      .nav-links a.active {
-        color: var(--bg);
-        background: var(--lime);
-      }
+        border: none;
+        border-radius: 10px;
+      }*/
+  
       .nav-cta {
         font-size: 13px;
         font-weight: 600;
         padding: 9px 18px;
-        border-radius: 100px;
+        border-radius: 10px;
         border: 1px solid var(--lime);
         color: var(--lime);
         display: flex;
         align-items: center;
         gap: 6px;
         transition:
-          background 0.25s,
+          all 0.25s,
           color 0.25s,
           box-shadow 0.25s;
         white-space: nowrap;
+      
       }
+      
       .nav-cta:hover {
         background: var(--lime);
         color: #050708;
         box-shadow: 0 0 24px rgba(183, 255, 0, 0.35);
+        transform: scale(1.07);
       }
       .nav-toggle {
         display: none;
@@ -343,6 +383,7 @@
         border: none;
         color: var(--text);
         width: 32px;
+        border-radius: 10px;
         height: 32px;
         position: relative;
       }
@@ -419,10 +460,10 @@
       }
       .hero-headline {
         font-family: var(--font-display);
-        font-weight: 700;
+        font-weight: 600;
         font-size: clamp(38px, 5.4vw, 68px);
         line-height: 1.06;
-        letter-spacing: -0.01em;
+        letter-spacing: 0.1em;
         margin-bottom: 22px;
       }
       .hero-headline .hl {
@@ -445,7 +486,7 @@
         font-size: 14px;
         font-weight: 600;
         padding: 14px 26px;
-        border-radius: 100px;
+        border-radius: 10px;
         display: inline-flex;
         align-items: center;
         gap: 8px;
@@ -484,7 +525,7 @@
         text-transform: uppercase;
         color: var(--text2);
         padding: 9px 16px;
-        border-radius: 100px;
+        border-radius: 10px;
         border: 1px solid var(--border-glass);
       }
       .status-dot {
@@ -793,6 +834,7 @@
         font-size: 20px;
         font-weight: 600;
         margin-bottom: 10px;
+        letter-spacing: 0.2rem;
       }
       .service-desc {
         color: var(--text2);
@@ -1119,7 +1161,7 @@
         border: 1px solid var(--lime);
         color: var(--lime);
         padding: 13px 24px;
-        border-radius: 100px;
+        border-radius: 10px;
         font-size: 14px;
         font-weight: 600;
         display: inline-flex;
@@ -1843,9 +1885,13 @@
     <div class="bg-noise"></div>
     <div class="cursor-dot" id="cursorDot"></div>
 
+
+
     <!-- ============ NAVBAR ============ -->
     <nav class="navbar">
       <a href="#home" class="nav-logo">ALI<span>.</span>HAMZA</a>
+
+      
       <div class="nav-links" id="navLinks">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
@@ -1854,11 +1900,17 @@
         <a href="#experience">Experience</a>
         <a href="#contact">Contact</a>
       </div>
+
+
+
       <a href="#contact" class="nav-cta">Let's Talk →</a>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
         <span></span><span></span>
       </button>
     </nav>
+
+
+
     <div class="mobile-menu" id="mobileMenu">
       <a href="#home">Home</a>
       <a href="#about">About</a>
@@ -2014,7 +2066,7 @@
               <div class="tech-chip glass">
                 <span class="ic">JS</span>JavaScript
               </div>
-              <div class="tech-chip glass"><span class="ic">⚛</span>React</div>
+              <!-- <div class="tech-chip glass"><span class="ic">⚛</span>React</div> -->
               <div class="tech-chip glass">
                 <span class="ic">~</span>Tailwind CSS
               </div>
@@ -2064,13 +2116,15 @@
             </div>
           </div>
           <div class="reveal reveal-delay-3">
-            <div class="tech-group-title">Tools</div>
+            <div class="tech-group-title">Editing Tools</div>
             <div class="chip-list">
-              <div class="tech-chip glass"><span class="ic">●</span>Capcut Pro</div>
-              <div class="tech-chip glass"><span class="ic">●</span>Kawai Cut</div>
               <div class="tech-chip glass">
-                <span class="ic">▣</span>Canva
+                <span class="ic">●</span>Capcut Pro
               </div>
+              <div class="tech-chip glass">
+                <span class="ic">●</span>Kawai Cut
+              </div>
+              <div class="tech-chip glass"><span class="ic">▣</span>Canva</div>
             </div>
           </div>
         </div>
@@ -2134,7 +2188,8 @@
             <span class="service-num">06</span>
             <div class="service-title">Basic Video Editing and Designing</div>
             <div class="service-desc">
-              Basic Video Editing Services, Reel Editing, youtube shorts and Instagram Reels and Poster Designs for commercials and Bussiness.
+              Basic Video Editing Services, Reel Editing, youtube shorts and
+              Instagram Reels and Poster Designs for commercials and Bussiness.
             </div>
             <div class="service-arrow">↗</div>
           </div>
@@ -2165,13 +2220,13 @@
                   <span></span><span></span><span></span>
                 </div>
                 <div class="browser-url">
-                  https://civora-bussiness-website.vercel.app/
+                  
                 </div>
               </div>
               <div class="project-shot">
                 <img
-                  src="assets/bussiness_website.png"
-                  alt="CIVORA Engineering website homepage"
+                  src="assets/Clinic CRM Healthcare Dashboard.png"
+                  alt="Clinic CRM"
                 />
               </div>
             </div>
@@ -2179,18 +2234,15 @@
               <span class="project-index">Project 01</span>
             </div>
             <div class="project-title">
-              CIVORA Engineering — Business Website
+              Clinic CRM — A Smart Health Care Managment systems
             </div>
             <p class="project-desc">
-              A modern UI/UX-focused business website built for CIVORA, an
-              engineering, building &amp; maintenance company in Islamabad —
-              designed to communicate credibility and convert visitors into
-              quote requests.
+              A web-based Clinic CRM designed to simplify and streamline daily healthcare operations. It provides efficient patient management, appointment scheduling, billing, payment tracking, and doctor management through a centralized dashboard. The system also offers analytics and financial reports to monitor clinic performance. Built using PHP, MySQL, and XAMPP, with a focus on usability, security, and efficient clinic administration.
             </p>
             <div class="project-tags">
-              <span class="tag">Next.js</span
-              ><span class="tag">Tailwind CSS</span
-              ><span class="tag">TypeScript</span>
+              <span class="tag">PHP</span
+              ><span class="tag">MySQL Database</span
+              ><span class="tag">XAMPP Server</span>
             </div>
             <div class="project-links">
               <a href="">GitHub ↗</a>
@@ -2291,10 +2343,7 @@
                 </div>
               </div>
               <div class="project-shot">
-                ><img
-                  src="assets/weather.png"
-                  alt="Weather Application"
-                /><
+                ><img src="assets/weather.png" alt="Weather Application" /><
               </div>
             </div>
             <div class="project-top">
@@ -2311,13 +2360,14 @@
             <div class="project-links">
               <a href="https://github.com/malihamza56/Live_weather_forecast.git"
                 >GitHub ↗</a
-              ><a href="https://liveweatherforecast-3kqcsgwncqvfplb4qtkzhh.streamlit.app/"
+              ><a
+                href="https://liveweatherforecast-3kqcsgwncqvfplb4qtkzhh.streamlit.app/"
                 >Live Demo ↗</a
               >
             </div>
           </div>
         </div>
-          <!-- <div class="glass glow-hover project-card reveal reveal-delay-2">
+        <!-- <div class="glass glow-hover project-card reveal reveal-delay-2">
             <div class="project-media">
               <div class="browser-bar">
                 <div class="browser-dots">
@@ -2947,7 +2997,12 @@
         aria-controls="waPopup"
         aria-label="Chat with me on WhatsApp"
       >
-        <svg viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+        <svg
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          stroke="none"
+          aria-hidden="true"
+        >
           <path
             d="M12 2C6.48 2 2 6.48 2 12c0 1.85.5 3.58 1.36 5.07L2 22l5.08-1.33A9.94 9.94 0 0 0 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18.2c-1.63 0-3.15-.46-4.44-1.26l-.32-.19-3.02.79.81-2.94-.21-.31A8.18 8.18 0 0 1 3.8 12c0-4.53 3.68-8.2 8.2-8.2 4.53 0 8.2 3.68 8.2 8.2 0 4.53-3.68 8.2-8.2 8.2zm4.5-6.14c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.13-.17.25-.64.81-.78.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.48-1.39-1.73-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.12-.15.16-.25.25-.42.08-.17.04-.31-.02-.44-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.44.06-.67.31-.23.25-.87.85-.87 2.07s.89 2.4 1.02 2.57c.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.11-.23-.17-.48-.29z"
           />
@@ -3096,14 +3151,12 @@
 
       waPopupClose.addEventListener("click", closeWaPopup);
 
-      document
-        .querySelectorAll(".wa-service-btn")
-        .forEach((btn) => {
-          btn.addEventListener("click", () => {
-            openWhatsappChat(btn.dataset.service);
-            closeWaPopup();
-          });
+      document.querySelectorAll(".wa-service-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+          openWhatsappChat(btn.dataset.service);
+          closeWaPopup();
         });
+      });
 
       // Click outside to close
       document.addEventListener("click", (e) => {
